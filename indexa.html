@@ -1,0 +1,207 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAGA Supermarket</title>
+    <link rel="stylesheet" href="style5.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="h.jpg" alt="HAGA Logo">
+            <h1>HAGA Supermarket</h1>
+        </div>
+        <nav>
+            <input type="text" id="searchBar" placeholder="Search products..." onkeyup="searchProducts()">
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#order-summary">Your Cart</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Welcome to HAGA Supermarket</h2>
+            <p>Your trusted local supermarket in Virudhunagar!</p>
+        </section>
+        <section id="products">
+            <h2>Featured Products</h2>
+            <div class="product-list">
+                <div class="product-card">
+                    <img src="https://i.ndtvimg.com/i/2014-11/milk_625x300_41416559876.jpg?im=FaceCrop,algorithm=dnn,width=140,height=105" alt="Milk">
+                    <h3>Milk</h3>
+                    <p>Fresh and pure cow milk.</p>
+                    <p><strong>₹50</strong></p>
+                    <button onclick="order('Milk', 50)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR-jMT4vzu5YjMGnlFzgQC2go59W4akrz7BvLCiKLOjfsLPMZsqI7U5T8uvWhKk6xW8YBRMgl4gH17PmP180jZ_ykETF0TAVCpW1CbwyVY" alt="Bread">
+                    <h3>Bread</h3>
+                    <p>Soft and fresh white bread.</p>
+                    <p><strong>₹40</strong></p>
+                    <button onclick="order('Bread', 40)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://m.economictimes.com/thumb/msid-93881796,width-1200,height-900,resizemode-4,imgsize-154184/after-wheat-and-sugar-govt-may-curb-rice-exports.jpg" alt="Rice">
+                    <h3>Rice</h3>
+                    <p>Premium quality basmati rice.</p>
+                    <p><strong>₹70/kg</strong></p>
+                    <button onclick="order('Rice', 70)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1dBWyUGm4BQ1k8B7UC7JBTSfBkRu-zFPb3g&s" alt="Oil">
+                    <h3>Oil</h3>
+                    <p>Healthy sunflower cooking oil.</p>
+                    <p><strong>₹150/litre</strong></p>
+                    <button onclick="order('Oil', 150)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="" alt="Sugar">
+                    <h3>Sugar</h3>
+                    <p>Refined white sugar.</p>
+                    <p><strong>₹45/kg</strong></p>
+                    <button onclick="order('Sugar', 45)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="" alt="Salt">
+                    <h3>Salt</h3>
+                    <p>Pure iodized salt.</p>
+                    <p><strong>₹20</strong></p>
+                    <button onclick="order('Salt', 20)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://www.sharmispassions.com/wp-content/uploads/2012/12/cardamom-tea4-500x500.jpg" alt="Tea">
+                    <h3>Tea</h3>
+                    <p>Refreshing tea leaves.</p>
+                    <p><strong>₹120</strong></p>
+                    <button onclick="order('Tea', 120)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_4Qn3LryFISqpFq1q1KszCXYT3U6iysAbEA&s" alt="Coffee">
+                    <h3>Coffee</h3>
+                    <p>Rich coffee powder.</p>
+                    <p><strong>₹150</strong></p>
+                    <button onclick="order('Coffee', 150)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD0WiHjwP9tdfTP1F7mRCBqxq36Ns3ZapikA&s" alt="Biscuits">
+                    <h3>Biscuits</h3>
+                    <p>Crunchy and tasty biscuits.</p>
+                    <p><strong>₹30</strong></p>
+                    <button onclick="order('Biscuits', 30)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://5.imimg.com/data5/LW/GN/MY-4990337/bath-soap.jpg" alt="Soap">
+                    <h3>Soap</h3>
+                    <p>Fragrant bathing soap.</p>
+                    <p><strong>₹25</strong></p>
+                    <button onclick="order('Soap', 25)">Add to Cart</button>
+                </div>
+            </div>
+            <button onclick="nextPage()">Next Page</button>
+        </section>
+        <section id="order-summary">
+            <h2>Your Cart</h2>
+            <ul id="order-list">
+                <!-- Ordered items will appear here -->
+            </ul>
+            <p><strong>Total: ₹<span id="total-price">0</span></strong></p>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Address: HAGA Supermarket, Main Road, Virudhunagar, Tamil Nadu</p>
+            <p>Phone: +91-9080147814</p><br>
+            <p>HARI</p>
+                <p>AYYANAR</p>
+                <p>GANESHAYYAR</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 HAGA Supermarket</p>
+    </footer>
+    <script>
+        let totalPrice = 0;
+        function order(productName, price) {
+            const orderList = document.getElementById('order-list');
+            const listItem = document.createElement('li');
+            listItem.innerHTML = `${productName} - ₹${price} <button onclick="removeItem(this, ${price})">Remove</button>`;
+            orderList.appendChild(listItem);
+            totalPrice += price;
+            document.getElementById('total-price').textContent = totalPrice;
+        }
+        function removeItem(button, price) {
+            const item = button.parentElement;
+            item.remove();
+            totalPrice -= price;
+            document.getElementById('total-price').textContent = totalPrice;
+        }
+        function nextPage() {
+            alert("Next page coming soon!");
+        }
+        function searchProducts() {
+            const input = document.getElementById('searchBar').value.toLowerCase();
+            const productCards = document.querySelectorAll('.product-card');
+            productCards.forEach(card => {
+                const name = card.querySelector('h3').textContent.toLowerCase();
+                card.style.display = name.includes(input) ? 'block' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>
+
+
+
+CSS FILE
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #f6f6f6;
+    color: #333;
+}
+header {
+    background: #232f3e;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+main {
+    padding: 2rem;
+}
+section {
+    margin-bottom: 3rem;
+}
+h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #232f3e;
+}
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+}
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #232f3e;
+    color: white;
+}
+
+
+
+
+
+
